@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #f4b8c9;
+  --dark-pink: #d982a0;
+  --text: #634653;
+  --muted: #987b88;
+  --white: #fff;
+  --soft-bg: #fff9fb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--soft-bg);
+  overflow-x: hidden;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* HALAMAN PEMBUKA */
+
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, #ffe5ee, transparent 35%),
+    radial-gradient(circle at 80% 80%, #fce2eb, transparent 35%),
+    #fff9fb;
+  transition: opacity .7s ease, visibility .7s ease;
+}
+
+.cover:not(.active) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cover-content {
+  max-width: 550px;
+  animation: appear 1s ease;
+}
+
+.cover-heart {
+  font-size: 70px;
+  color: var(--dark-pink);
+  margin-bottom: 15px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.small-heading {
+  color: var(--dark-pink);
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cover h1,
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 8vw, 72px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.cover h1 span,
+.hero h1 span {
+  color: var(--dark-pink);
+}
+
+.cover-text {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 400px;
+  margin: 0 auto 28px;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 28px;
+  color: white;
+  background: var(--dark-pink);
+  box-shadow: 0 8px 25px #d982a044;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background: #c96f8e;
+}
+
+.primary-btn span {
+  margin-left: 8px;
+}
+
+/* HALAMAN UTAMA */
+
+.main-screen {
+  display: none;
+  opacity: 0;
+  transition: opacity .8s ease;
+}
+
+.main-screen.active {
+  display: block;
+  opacity: 1;
+}
+
+.hero {
+  min-height: 520px;
+  padding: 100px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 15% 25%, #ffe2ec, transparent 30%),
+    radial-gradient(circle at 85% 70%, #fce5ee, transparent 30%);
+}
+
+.hero > p:not(.small-heading) {
+  max-width: 480px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.anniversary {
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: 1px solid #f3d5df;
+  border-radius: 30px;
+  color: var(--dark-pink);
+  font-size: 13px;
+  background: #ffffffaa;
+}
+
+.anniversary span {
+  margin-right: 5px;
+}
+
+/* SECTION */
+
+.section {
+  max-width: 1200px;
+  padding: 85px 24px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 42px);
+  margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* GALERI FOTO */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.photo-card {
+  min-width: 0;
+  padding: 12px 12px 20px;
+  background: white;
+  border: 1px solid #f4e3e9;
+  box-shadow: 0 10px 30px #8c53600a;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.photo-card:nth-child(even) {
+  transform: translateY(8px) rotate(1deg);
+}
+
+.photo-card:nth-child(odd) {
+  transform: rotate(-1deg);
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) rotate(0);
+  box-shadow: 0 15px 35px #8c536018;
+}
+
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.photo-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  line-height: 1.35;
+  margin: 0 6px 7px;
+}
+
+.photo-card p {
+  margin: 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* VIDEO */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.video-card {
+  min-height: 220px;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f7dce6, #fcecf2);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #d982a033;
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  padding-left: 4px;
+  border-radius: 50%;
+  background: white;
+  color: var(--dark-pink);
+  font-size: 22px;
+}
+
+/* PESAN */
+
+.message-button-wrap {
+  text-align: center;
+}
+
+.letter-list {
+  max-width: 800px;
+  margin: 35px auto 0;
+  display: grid;
+  gap: 20px;
+}
+
+.letter-list.hidden {
+  display: none;
+}
+
+.letter-list.show {
+  display: grid;
+  animation: appear .7s ease;
+}
+
+.letter-card {
+  position: relative;
+  padding: 30px;
+  border: 1px solid #f2dce5;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 30px #8c53600a;
+}
+
+.letter-number {
+  color: var(--dark-pink);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.letter-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  margin: 12px 0;
+}
+
+.letter-card p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 55px 20px;
+  text-align: center;
+  background: #fff0f5;
+}
+
+.footer-heart {
+  color: var(--dark-pink);
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+footer p {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+footer span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* VIDEO MODAL */
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  padding: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #24141dcc;
+}
+
+.video-modal.active {
+  display: flex;
+}
+
+.video-modal-content {
+  position: relative;
+  width: min(850px, 100%);
+  background: #000;
+  border-radius: 15px;
+  overflow: visible;
+}
+
+.video-modal video {
+  width: 100%;
+  max-height: 80vh;
+  display: block;
+  border-radius: 15px;
+}
+
+.close-video {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  background: var(--dark-pink);
+  font-size: 25px;
+}
+
+/* TOMBOL MUSIK */
+
+.music-toggle {
+  position: fixed;
+  z-index: 15;
+  right: 22px;
+  bottom: 22px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  background: var(--dark-pink);
+  font-size: 23px;
+  box-shadow: 0 5px 20px #d982a055;
+}
+
+/* HATI MELAYANG */
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -30px;
+  color: #f2a9c0;
+  opacity: .6;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 450px;
+    padding: 80px 20px;
+  }
+
+  .section {
+    padding: 65px 18px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .photo-card {
+    padding: 9px 9px 15px;
+  }
+
+  .photo-card h3 {
+    font-size: 16px;
+  }
+
+  .photo-card p {
+    font-size: 12px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    min-height: 180px;
+  }
+
+  .letter-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}

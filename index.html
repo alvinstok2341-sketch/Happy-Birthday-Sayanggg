@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Sayanggg!</title>
+  <meta name="description" content="Sebuah hadiah kecil untuk seseorang yang sangat istimewa.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <!-- HALAMAN PEMBUKA -->
+  <section class="cover active" id="cover">
+    <div class="cover-content">
+      <div class="cover-heart">♡</div>
+      <p class="small-heading">A LITTLE SURPRISE FOR YOU</p>
+      <h1>Happy Birthday,<br><span>Sweet Seventeen Sayanggg!</span></h1>
+      <p class="cover-text">
+        Ada sesuatu yang ingin aku tunjukkan untuk kamu.
+        Semoga kamu suka dengan hadiah kecil ini.
+      </p>
+      <button class="primary-btn" id="openGift">
+        Buka Hadiah <span>♡</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- HALAMAN UTAMA -->
+  <main class="main-screen" id="mainScreen">
+
+    <header class="hero">
+      <p class="small-heading">TO MY FAVORITE PERSON</p>
+      <h1>Happy Birthday,<br><span>My Love ♡</span></h1>
+      <p>
+        Selamat bertambah usia, sayang.
+        Semoga hari-harimu selalu dipenuhi kebahagiaan.
+      </p>
+      <div class="anniversary">
+        <span>♡</span> Since 8 Februari 2026
+      </div>
+    </header>
+
+    <!-- GALERI FOTO -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading">
+        <p class="small-heading">OUR LITTLE MEMORIES</p>
+        <h2>Beautiful Memories</h2>
+        <p>Beberapa potongan kecil dari cerita kita yang selalu ingin aku ingat.</p>
+      </div>
+
+      <div class="photo-grid">
+
+        <article class="photo-card">
+          <img src="images/foto-01.jpg" alt="Our first memory">
+          <h3>Our first memory</h3>
+          <p>Salah satu momen yang selalu aku ingat.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-02.jpg" alt="My favorite smile">
+          <h3>My favorite smile</h3>
+          <p>Senyummu adalah salah satu hal terindah yang pernah kutemukan.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-03.jpg" alt="Just us">
+          <h3>Just us</h3>
+          <p>Sesederhana itu, melihatmu saja sudah cukup membuatku bahagia.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-04.jpg" alt="Happy little moment">
+          <h3>Happy little moment</h3>
+          <p>Hal kecil yang menjadi kenangan besar.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-05.jpg" alt="My comfort place">
+          <h3>My comfort place</h3>
+          <p>Di antara banyak hal indah, kamu tetap yang paling istimewa.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-06.jpg" alt="Unforgettable day">
+          <h3>Unforgettable day</h3>
+          <p>Hari yang ingin kuulang lagi.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-07.jpg" alt="Always together">
+          <h3>Always together</h3>
+          <p>Semoga masih banyak cerita yang bisa kita ukir bersama.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-08.jpg" alt="Sweetest memory">
+          <h3>Sweetest memory</h3>
+          <p>Senyummu selalu punya cara tersendiri untuk membuat hariku indah.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-09.jpg" alt="My happy place">
+          <h3>My happy place</h3>
+          <p>Ada ketenangan yang selalu kutemukan saat melihatmu.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto-10.jpg" alt="To more memories">
+          <h3>To more memories</h3>
+          <p>Masih banyak cerita indah yang ingin aku lalui bersamamu.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- VIDEO KENANGAN -->
+    <section class="section video-section">
+      <div class="section-heading">
+        <p class="small-heading">MOVING MEMORIES</p>
+        <h2>Our Little Videos</h2>
+        <p>Beberapa momen yang ingin aku simpan lebih lama.</p>
+      </div>
+
+      <div class="video-grid">
+        <button class="video-card play-video" data-video="videos/video-01.mp4">
+          <span class="play-icon">▶</span>
+          <span>Our Video Memory 01</span>
+        </button>
+
+        <button class="video-card play-video" data-video="videos/video-02.mp4">
+          <span class="play-icon">▶</span>
+          <span>Our Video Memory 02</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PESAN ROMANTIS -->
+    <section class="section message-section">
+      <div class="section-heading">
+        <p class="small-heading">A LETTER FOR YOU</p>
+        <h2>Words From My Heart</h2>
+        <p>Ada sedikit cerita dan beberapa hal yang ingin aku bagikan denganmu. Bacalah perlahan, ya. ♡</p>
+      </div>
+
+      <div class="message-button-wrap" id="messageOpenWrap">
+        <button class="primary-btn" id="openMessages">
+          Baca Pesanku <span>♡</span>
+        </button>
+      </div>
+
+      <div class="letter-list hidden" id="letterList">
+
+        <article class="letter-card">
+          <span class="letter-number">01</span>
+          <h3>Untuk Kamu, Sayang</h3>
+          <p>
+            Selamat ulang tahun, sweet seventeen orang tersayangku. Terima kasih sudah hadir
+            dan menjadi bagian dari cerita hidupku. Aku mungkin tidak selalu
+            bisa memberikan hal-hal yang sempurna, tetapi aku akan selalu
+            berusaha memberikan yang terbaik untukmu. Semoga di usia barumu
+            ini, kamu semakin bahagia, semakin kuat, dan semua hal yang kamu
+            impikan bisa perlahan menjadi kenyataan.
+          </p>
+        </article>
+
+        <article class="letter-card">
+        <span class="letter-number">02</span>
+        <h3>What I Need to Tell You</h3>
+        <p>
+            Jujur, bukan hal yang mudah bagiku untuk menulis ini. Ada banyak hal yang sudah aku pikirkan sebelum akhirnya memberanikan diri menyampaikan semuanya.
+            Kita masih sama-sama muda, masih berusia 17 tahun, dan perjalanan hidup kita masih sangat panjang. Ada banyak hal yang ingin aku capai dan banyak impian yang ingin aku wujudkan.
+
+            Sebagai seorang anak pertama laki-laki, aku punya tanggung jawab dan harapan besar untuk keluargaku. Aku ingin suatu hari nanti bisa membahagiakan orang tuaku, membantu memperbaiki keadaan ekonomi keluarga, dan menjadi seseorang yang bisa diandalkan. Aku tahu keadaan keluargaku saat ini belum sepenuhnya mencukupi, tetapi justru itu yang membuatku ingin berusaha lebih keras untuk masa depan.
+
+            Aku tidak ingin membandingkan keadaan kita, apalagi membuatmu merasa bahwa keadaanmu yang lebih baik adalah sebuah kesalahan. Aku hanya sedang belajar memahami keadaan diriku sendiri dan apa saja yang perlu aku perjuangkan.
+
+            Karena itu, aku merasa perlu memberikan lebih banyak waktu untuk diriku sendiri, pendidikan, impian, dan masa depan. Aku ingin belajar menjadi pribadi yang lebih mandiri dan bertanggung jawab sebelum melangkah lebih jauh dalam kehidupan.
+
+            Aku sudah memikirkan ini baik-baik, dan aku merasa lebih baik jika kita mengakhiri hubungan sebagai pasangan. Bukan karena kamu kurang baik, bukan karena aku tidak menghargai kehadiranmu, tetapi karena saat ini aku ingin memprioritaskan perjalanan hidup dan tanggung jawabku sendiri.
+
+            Aku berharap kita masih bisa berteman. Aku tidak ingin semua kenangan baik yang pernah kita punya berubah menjadi kebencian. Namun, aku juga mengerti jika kamu membutuhkan waktu dan jarak untuk menerima keputusan ini. Aku tidak akan memaksamu untuk langsung baik-baik saja.
+
+            Maaf jika keputusan ini menyakitkan. Aku tahu mungkin tidak mudah untuk menerimanya, tetapi aku berharap kamu bisa memahami bahwa keputusan ini bukan untuk merendahkanmu ataupun menyalahkan siapa pun.
+
+            Terima kasih karena sudah pernah menjadi bagian dari perjalanan hidupku. Aku berharap kamu bisa terus tumbuh menjadi perempuan yang hebat, meraih semua impianmu, membahagiakan keluargamu, dan mendapatkan banyak kebahagiaan dalam hidupmu.
+
+            Jaga dirimu baik-baik, ya. Kita masih punya perjalanan panjang untuk mengejar impian masing-masing.
+
+            Terima kasih untuk semua cerita yang pernah kita punya. ❤️
+        </p>
+        </article>
+
+        <article class="letter-card">
+        <span class="letter-number">03</span>
+        <h3>My Wishes for Your Future</h3>
+        <p>
+            Aku tahu selama ini tidak mudah bagimu. Ada banyak hal yang mungkin kamu pendam sendiri, banyak perasaan yang tidak bisa kamu ceritakan, dan terkadang apa pun yang kamu lakukan terasa salah di mata orang yang kamu harapkan bisa mengerti dirimu. Namun, aku ingin kamu tahu bahwa kamu adalah perempuan hebat yang punya banyak kemampuan, prestasi, dan impian. Jangan pernah meragukan dirimu hanya karena tidak semua orang bisa memahami dan mendukungmu. Tetaplah berjuang meraih apa yang kamu inginkan dan jangan terlalu keras pada dirimu sendiri. Jika suatu saat kamu membutuhkan teman untuk bercerita atau sekadar seseorang yang mau mendengarkan, aku akan berusaha ada untukmu, meskipun nantinya hanya sebagai teman. Terakhir, aku ingin meminta maaf karena sudah membuatmu sedih, terlebih lagi di hari kelahiranmu. Aku tahu seharusnya hari ini menjadi hari yang penuh kebahagiaan untukmu, dan aku benar-benar minta maaf karena keputusan ini justru membawa kesedihan. Aku berharap kamu tetap bisa tersenyum, meraih semua impianmu, dan menemukan banyak kebahagiaan dalam perjalanan hidupmu. Selamat bertambah usia, tetaplah menjadi perempuan hebat yang aku kenal. Aku akan selalu mendoakan yang terbaik untukmu. ❤️
+        </p>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-heart">♡</div>
+      <p>Dibuat dengan penuh cinta untuk kamu.</p>
+      <span>Forever your favorite person.</span>
+    </footer>
+
+  </main>
+
+  <!-- PEMUTAR VIDEO -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <button class="close-video" id="closeVideo" aria-label="Tutup video">×</button>
+      <video id="memoryVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <!-- MUSIK -->
+  <audio id="bgMusic" src="music/lagu-kita.mp3" loop></audio>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Putar atau jeda musik">
+    ♫
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
